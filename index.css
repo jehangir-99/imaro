@@ -1,0 +1,386 @@
+body {
+    background-color: yellow;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.blank
+{
+    margin-top: 80px;
+}
+
+.left-div {
+    width: 50%;
+    height: 2000px;
+    background-color: yellow;
+    padding: 20px; /* Added padding for spacing */
+    box-sizing: border-box;
+}
+
+.outer-div {
+    border: 2px solid white;
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Adjust padding for spacing */
+    position: relative; /* Positioning context for header and dropdown */
+    margin-bottom: 20px; /* Space between outer div and new section */
+}
+
+.outer-content {
+    text-align: center;
+    margin-bottom: 20px; /* Space between content and header */
+}
+
+.support-text {
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 40px;
+    text-align: center;
+    color: white;
+}
+
+.imaro-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px; /* Space between lines */
+}
+
+.buy-now-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 50px; /* Space between text and button */
+    border: none;
+    font-size: 16px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 2px solid white;
+    background-color: transparent;
+    position: relative;
+}
+
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.hamburger:hover {
+    color: #ff6f61;
+}
+
+.site-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.buy-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Adjusted Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position dropdown directly below the hamburger icon */
+    left: 0; /* Align dropdown with the left edge of the hamburger icon */
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Adjust width as needed */
+    padding: 10px;
+    z-index: 1000; /* Ensure it appears above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for better visibility */
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 10px 0;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.dropdown-menu a:hover {
+    color: #ff6f61;
+}
+
+
+/* Info Section */
+.info-section {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: yellow; /* Matching background color to left div */
+    margin-top: 20px; /* Space above the new section */
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.info-label {
+    font-weight: bold;
+}
+
+.info-value a {
+    color: #333;
+    text-decoration: none;
+}
+
+.info-value a:hover {
+    color: #ff6f61;
+}
+
+/* How To Buy Section */
+.how-to-buy-section {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: yellow; /* Matching background color to left div */
+    margin-top: 20px; /* Space above the new section */
+}
+
+.how-to-buy-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering the heading text */
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below heading */
+    color: white;
+}
+
+.how-to-buy-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    color: #333;
+    justify-content: center; /* Centering the content horizontally */
+    text-align: center;
+    margin-bottom: 20px; /* Space between content and description */
+}
+
+.how-to-buy-image {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    margin-right: 15px; /* Space between image and text */
+}
+
+.how-to-buy-text {
+    font-size: 25px;
+    color: white;
+    flex: 1; /* Takes up remaining space to center text */
+}
+
+.how-to-buy-description {
+    font-size: 20px;
+    color: #333;
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Space between content and description */
+}
+
+/* SWAP SOL FOR $IMARO Section */
+.swap-sol-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering the heading text */
+    font-size: 25px; /* Add this back if needed */
+    margin-bottom: 10px; /* Space below heading */
+    color: white;
+}
+
+.swap-sol-content {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    text-align: left; /* Align text to the left */
+    margin-bottom: 20px; /* Space between content and description */
+}
+
+.responsive-image {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    margin-right: 15px; /* Space between image and text */
+    border-radius: inherit; /* Inherit border radius from parent element */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+.swap-sol-text {
+    font-size: 20px;
+    color: white;
+    flex: 1; /* Takes up remaining space to center text vertically */
+}
+
+.swap-sol-description {
+    font-size: 20px;
+    color: #333;
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Space between content and description */
+}
+
+
+/* GO TO JUPITER Section */
+.go-to-jupiter-section {
+    border: none; /* Remove the border */
+    border-radius: 15px;
+    padding: 20px;
+     /* Matching background color to left div */
+    margin-top: 20px; /* Space above the new section */
+}
+
+.go-to-jupiter-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering the heading text */
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below heading */
+    color: white;
+}
+
+.go-to-jupiter-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    color: #333;
+    justify-content: center; /* Centering the content horizontally */
+    text-align: center;
+    margin-bottom: 20px; /* Space between content and description */
+}
+
+.go-to-jupiter-image {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    margin-right: 15px; /* Space between image and text */
+}
+
+.go-to-jupiter-text {
+    font-size: 25px;
+    color: white;
+    flex: 1; /* Takes up remaining space to center text */
+}
+
+.go-to-jupiter-description {
+    font-size: 20px;
+    color: #333;
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Space between content and description */
+}
+
+
+/* TOKENOMICS Section */
+.tokenomics-section {
+    border: 2px solid white; /* Remove if you don't want a border */
+    border-radius: 15px;
+    padding: 20px;
+    background-color: yellow; /* Background color matching the other sections */
+    margin-top: 20px; /* Space above the section */
+    text-align: center; /* Center-align all text */
+}
+
+.tokenomics-heading {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.tokenomics-number {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px; /* Space between number and description */
+}
+
+.tokenomics-description {
+    font-size: 20px;
+    color: white;
+}
+
+
+/* Footer Section */
+.footer-section {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: yellow; /* Matching background color to other sections */
+    margin-top: 20px; /* Space above the footer */
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.footer-left {
+    font-size: 16px;
+    color: white;
+}
+
+.footer-right {
+    font-size: 16px;
+}
+
+.scroll-to-top {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Styles specific to the right div */
+.right-div {
+    background-color: yellow; /* Matching background color to left div */
+    border: 2px;  /* Same border as the left div */
+    border-radius: 15px; /* Apply the same border-radius */
+    padding: 20px; /* Added padding for spacing */
+    box-sizing: border-box;
+}
+
+/* Styles for the image inside the right div */
+.right-div img {
+    width: 120%; /* Make image fit the div */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: inherit; /* Inherit border-radius from parent */
+}
+
+
+
